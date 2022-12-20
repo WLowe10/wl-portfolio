@@ -1,6 +1,6 @@
 import { createUseStyles } from "react-jss";
 import { Theme } from "@global/constants/theme";
-import { Fonts } from "@global/constants/fonts";
+import { Families, Weights } from "@global/constants/fonts";
 
 export const useStyles = createUseStyles({
     home: {
@@ -10,17 +10,9 @@ export const useStyles = createUseStyles({
 
     mainContainer: {
         display: "flex",
-        padding: 20
+        flex: 1,
+        padding: 40,
+        flexDirection: "column",
+        maxWidth: "56rem",
     },
-
-    topBar: {
-        display: "flex",
-        flexDirection: "row"
-    },
-
-    title: {
-        fontFamily: Fonts.SaiyanSans,
-        color: Theme.fontColors.primary,
-        fontSize: "3rem",
-    }
 })
