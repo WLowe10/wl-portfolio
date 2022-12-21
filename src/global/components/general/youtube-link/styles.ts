@@ -8,7 +8,8 @@ export const useStyles = createUseStyles({
         flexDirection: "row",
         backgroundColor: Theme.accents.dark,
         height: 128,
-        width: "100%"
+        borderRadius: "1rem",
+        overflow: "hidden"
     },
     songInfo: {
         display: "flex",

@@ -1,13 +1,19 @@
 import { useStyles } from "./styles";
 import { YoutubeLink } from "@global/components/general";
-import BHOTR from "@global/assets/images/BHOTR.png"
-import responsibility from "@global/assets/images/responsibility.png"
+import BHOTR from "@global/assets/images/BHOTR.png";
+import responsibility from "@global/assets/images/responsibility.png";
+import shire from "@global/assets/images/shire.png";
 
 const songs = [
     {
         title: "Spider-Man Resposibility Theme",
         artist: "Danny Elfman",
         thumbnail: responsibility
+    },
+    {
+        title: "Sound of The Shire",
+        artist: "The City of Prague Philharmonic Orchestra",
+        thumbnail: shire
     },
     {
         title: "Battle Hymn Of The Republic",

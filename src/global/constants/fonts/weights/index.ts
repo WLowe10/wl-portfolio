@@ -6,5 +6,8 @@ export const Weights = {
     },
     Ubuntu: {
         "400": 400
+    },
+    Satisfy: {
+        "400": 400
     }
 };

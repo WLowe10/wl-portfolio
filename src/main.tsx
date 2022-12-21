@@ -12,6 +12,8 @@ import "@fontsource/nunito-sans/700.css";
 
 import "@fontsource/ubuntu/400.css";
 
+import "@fontsource/satisfy/400.css";
+
 //*global styles*//
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

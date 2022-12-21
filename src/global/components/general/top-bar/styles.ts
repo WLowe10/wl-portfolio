@@ -8,6 +8,7 @@ export const useStyles = createUseStyles({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
+        width: "100%",
         padding: {
             bottom: 50
         }
