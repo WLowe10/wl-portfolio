@@ -13,7 +13,7 @@ const useGlobalStyles = createUseStyles({
       font: "inherit",
       cursor: "pointer",
       outline: "inherit"
-    }
+    },
   }
 })
 

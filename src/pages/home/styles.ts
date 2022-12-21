@@ -4,23 +4,27 @@ import { Families, Weights } from "@global/constants/fonts";
 
 export const useStyles = createUseStyles({
     home: {
+        display: "flex",
         backgroundColor: Theme.background,
-        justifyContent: "center", 
-        height: "100%"
+       // background: "linear-gradient(329deg, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 64%)",
+       //background: "linear-gradient(329deg, rgba(65,94,218,1) 0%, rgba(0,0,0,1) 36%)",
+        justifyContent: "center",         
     },
-
     mainContainer: {
         display: "flex",
         flex: 1,
         padding: 40,
         flexDirection: "column",
-        maxWidth: "56rem",
+       // maxWidth: "56rem",
+        alignItems: "center"
     },
-
-    cardGrid: {
-        paddingTop: "5rem",
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: 20
-    },
+    aboutContainer: {
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        gap: "5rem",
+        padding: {
+            top: "5rem"
+        }
+    }
 })

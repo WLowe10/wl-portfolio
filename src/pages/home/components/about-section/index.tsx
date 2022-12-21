@@ -3,22 +3,32 @@ import { Music } from "react-feather";
 import { useStyles } from "./styles";
 
 type Props = {
-    children: ReactNode
+    children: ReactNode,
+    display: ReactNode,
+    displaySide: "left" | "right"
 };
 
-export const AboutSection = ({children}: Props) => {
+export const AboutSection = ({children, display, displaySide}: Props) => {
     const classes = useStyles();
 
     return (
         <div className={classes.aboutSection}>
             <div className={classes.display}>
-                <Music />
+                {
+                    displaySide == "left" && display
+                }
             </div>
-            
-            <div>
-            {
-                children
-            }
+
+            <div className={classes.content}>
+                {
+                    children
+                }
+            </div>
+
+            <div className={classes.display}>
+                {
+                    displaySide == "right" && display
+                }
             </div>
         </div>
     )

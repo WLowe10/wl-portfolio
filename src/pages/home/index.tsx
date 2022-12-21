@@ -1,9 +1,11 @@
 import { useStyles } from "./styles";
-import { FullFlex } from "@global/components/containers";
+import { FullFlex, MaxContainer } from "@global/components/containers";
 import { TopBar, TextField, CollapsableCard, HoverableText } from "@global/components/general";
 import { YoutubeLink } from "@global/components/general";
 import { BestSongs } from "./components/best-songs";
-import { AboutSection } from "./components/about-section";
+import { AboutSection, DateAnnotation } from "./components";
+import { Music } from "react-feather";
+import { Theme } from "@global/constants/theme";
 
 export const Home = () => {
     const classes = useStyles();
@@ -11,23 +13,19 @@ export const Home = () => {
     return (
         <FullFlex className={classes.home}>
             <div className={classes.mainContainer}>
-                <TopBar/>
-                <TextField>
-                    <p>Hey there! I'm <HoverableText text={"Wes"} />, a full stack developer with a love for coding and creating elegant applications. From the origin of Typescript and constantly learning new skills, I strive to push the boundaries of what's possible. Thanks for checking out my portfolio. This page in particular is an overview of my interests. Take a look around and see what I'm all about.</p>
-                </TextField>
+                <MaxContainer>
+                    <TopBar/>
+                    <TextField>
+                        <p>Hey! I'm <HoverableText text={"Wes"} />, a full stack developer with a love for coding and creating elegant applications. From the origin of Typescript and constantly learning new skills, I strive to push the boundaries of what's possible. Thanks for checking out my portfolio. This page in particular is an overview of my interests. Take a look around and see what I'm all about.</p>
+                    </TextField>  
+                    <DateAnnotation time={""}/>
+                </MaxContainer>
 
-                {/* <div className={classes.cardGrid}>
-                    <CollapsableCard />
-                    <CollapsableCard />
-                    <CollapsableCard />
-                    <CollapsableCard />
-                </div> */}
-
-                <AboutSection>
-                    <YoutubeLink />
-                    <YoutubeLink />
-
-                </AboutSection>
+                <div className={classes.aboutContainer}>
+                    <AboutSection displaySide={"left"} display={<Music size={128} color={Theme.accents.dark} />}>
+                       <BestSongs />
+                    </AboutSection> 
+                </div>
             </div>
         </FullFlex>
     )

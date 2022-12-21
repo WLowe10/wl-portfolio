@@ -1,14 +1,18 @@
 import { useStyles } from "./styles";
 import { YoutubeLink } from "@global/components/general";
+import BHOTR from "@global/assets/images/BHOTR.png"
+import responsibility from "@global/assets/images/responsibility.png"
 
 const songs = [
     {
-        name: "Spider-Man Resposibility Theme",
-        artist: "Danny Elfman"
+        title: "Spider-Man Resposibility Theme",
+        artist: "Danny Elfman",
+        thumbnail: responsibility
     },
     {
-        name: "Battle Hymn Of The Republic",
-        artist: "John Mcdermott"
+        title: "Battle Hymn Of The Republic",
+        artist: "John Mcdermott",
+        thumbnail: BHOTR
     },
 ]
 
@@ -18,7 +22,7 @@ export const BestSongs = () => {
     return (
         <div className={classes.bestSongs}>
             {
-                songs.map(song => <YoutubeLink />)
+                songs.map((song, index) => <YoutubeLink thumbnail={song.thumbnail} ranking={index + 1} title={song.title} artist={song.artist}/>)
             }
         </div>
     )
