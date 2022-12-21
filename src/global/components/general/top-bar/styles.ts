@@ -16,7 +16,7 @@ export const useStyles = createUseStyles({
     title: {
         fontFamily: Families.SaiyanSans,
         color: Theme.fontColors.primary,
-        fontSize: Sizes.xl,
+        fontSize: Sizes.ExtraLarge,
     },
 
     navElement: {

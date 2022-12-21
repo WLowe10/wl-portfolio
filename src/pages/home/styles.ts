@@ -5,7 +5,8 @@ import { Families, Weights } from "@global/constants/fonts";
 export const useStyles = createUseStyles({
     home: {
         backgroundColor: Theme.background,
-        justifyContent: "center"
+        justifyContent: "center", 
+        height: "100%"
     },
 
     mainContainer: {
@@ -14,5 +15,12 @@ export const useStyles = createUseStyles({
         padding: 40,
         flexDirection: "column",
         maxWidth: "56rem",
+    },
+
+    cardGrid: {
+        paddingTop: "5rem",
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: 20
     },
 })

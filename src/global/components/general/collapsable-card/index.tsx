@@ -1,37 +1,42 @@
 import { useState } from "react";
 import { useStyles } from "./styles";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "react-feather";
+import { Theme } from "@global/constants/theme";
 
 const chevronVariants = {
     open: {
         transform: "rotate(0deg)",
         transition: {
-            type: "spring"
+            type: "spring",
+            damping: 10
         }
 
     },
     closed: {
         transform: "rotate(90deg)",
         transition: {
-            type: "spring"
+            type: "spring",
+            damping: 10
         }
     }
 };
 
 const contentVariants = {
     open: {
-        height: "max-content",
-        opacity: 1,
+       opacity: 1,
+       height: "auto",
         transition: {
-            duration: .25
+           type: "spring",
+           duration: .25,
         }
     },
     closed: {
-        height: 0,
         opacity: 0,
+        height: 0,
         transition: {
-            duration: .25
+           type: "spring",
+           duration: .25,
         }
     }
 };
@@ -48,23 +53,25 @@ export const CollapsableCard = () => {
                 </p>
 
                 <motion.button className={classes.expandButton} onClick={() => setOpen(prev => !prev)} variants={chevronVariants} animate={open ? "open" : "closed"} initial={"closed"}>
-                    <ChevronDown />
+                    <ChevronDown color={Theme.fontColors.secondary}/>
                 </motion.button>
             </div>
-
-            <motion.div className={classes.cardContent} variants={contentVariants} animate={open ? "open" : "closed"} initial={"closed"}>
-                <p>
-                    hello world
-                </p>
-                <p>
-                    hello world
-                </p>
-                <p>
-                    hello world
-                </p>
-                
-
-            </motion.div>
+            <AnimatePresence>
+                {
+                    open &&  <motion.div className={classes.cardContent} initial={contentVariants.closed} animate={contentVariants.open} exit={contentVariants.closed}>
+                    <p>
+                        hello world
+                    </p>
+                    <p>
+                        hello world
+                    </p>
+                    <p>
+                        hello world
+                    </p>
+                </motion.div>
+                }
+               
+            </AnimatePresence>
         </div>
     )
 };

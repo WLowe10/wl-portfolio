@@ -8,7 +8,9 @@ export const useStyles = createUseStyles({
         flexDirection: "column",
         backgroundColor: Theme.accents.dark,
         borderRadius: "1rem",
-        padding: "1rem"
+        padding: "1rem",
+        height: "fit-content",
+        overflow: "hidden"
     },
     cardTitleRow: {
         display: "flex",
@@ -20,7 +22,7 @@ export const useStyles = createUseStyles({
         fontFamily: Families.NunitoSans,
         fontWeight: Weights.NunitoSans[600],
         color: Theme.fontColors.primary,
-        fontSize: Sizes.l
+        fontSize: Sizes.Medium
     },
     expandButton: {
 

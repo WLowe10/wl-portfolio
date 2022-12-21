@@ -8,7 +8,7 @@ type Props = {
 
 export const FullFlex = ({children, style, className}: Props) => {
     return (
-        <div style={{display: "flex", height: "100vh", flex: 1, ...style}} className={className}>
+        <div style={{display: "flex", minHeight: "100vh", flex: 1, ...style}} className={className}>
             {
                 children
             }

@@ -1,7 +1,8 @@
 export const Sizes = {
-    xl: "3rem",
-    l: "2rem",
-    m: "1rem",
-    s: "",
-    xs: ""
+    ExtraLarge: "3rem",
+    Large: "2rem",
+    Medium: "1.5rem",
+    Default: "1rem",
+    Small: ".75rem",
+    ExtraSmall: ""
 };
