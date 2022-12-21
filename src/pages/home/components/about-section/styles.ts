@@ -28,20 +28,10 @@ export const useStyles = createUseStyles({
     },
     content: {
         display: "flex",
-        flex: 2,
         backgroundColor: "#141414",
         padding: "1rem",
         alignItems: "center",
         gap: "1rem",
         flexDirection: "column",
-        maxWidth: "56rem",
-    },
-    display: {
-        position: "absolute",
-        left: -300,
-        display: "flex",
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
     },
 });

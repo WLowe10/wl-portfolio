@@ -13,16 +13,21 @@ export const useStyles = createUseStyles({
             bottom: 50
         }
     },
-
     title: {
         fontFamily: Families.SaiyanSans,
         color: Theme.fontColors.primary,
         fontSize: Sizes.ExtraLarge,
     },
-
     navElement: {
         fontFamily: Families.NunitoSans,
         fontWeight: Weights.NunitoSans[700],
-        color: Theme.fontColors.secondary
+        color: Theme.accents.grey,
+        textDecoration: "none"
+    },
+    navElementActive: {
+        fontFamily: Families.NunitoSans,
+        fontWeight: Weights.NunitoSans[700],
+        color: Theme.fontColors.secondary,
+        textDecoration: "none"
     }
 })

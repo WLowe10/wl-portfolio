@@ -20,9 +20,6 @@ export const AboutSection = ({children, display, displaySide}: Props) => {
                 <p className={classes.aboutTitle}>🎵 Top 5 Songs Of Human History</p>
             </div>
             <div className={classes.content}>
-                {/* {
-                    isMobile && display
-                } */}
                 {
                     children
                 }

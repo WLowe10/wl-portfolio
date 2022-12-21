@@ -15,7 +15,6 @@ export const useStyles = createUseStyles({
         flex: 1,
         padding: "2rem",
         flexDirection: "column",
-        maxWidth: "56rem",
     },
     separator: {
         display: "flex",

@@ -35,7 +35,8 @@ export const useStyles = createUseStyles({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        color: Theme.fontColors.primary,
-        fontWeight: Weights.NunitoSans[700]
+        color: Theme.accents.grey,
+        fontWeight: Weights.NunitoSans[700],
+
     }
 });

@@ -5,6 +5,9 @@ import { createUseStyles } from 'react-jss';
 
 const useGlobalStyles = createUseStyles({
   "@global": {
+    "body": {
+      overflow: "overlay"
+    },
     "button": {
       background: "none",
       color: "inherit",
