@@ -6,17 +6,12 @@ export const Tree = () => {
 
     return (
         <div className={classes.tree}>
-            <TreeItem>
+            <TreeItem root>
                 <TreeItem>
+                    <TreeItem />
                     <TreeItem />
                 </TreeItem>
             </TreeItem>
-
-            {/* <TreeItem root>
-                <TreeItem>
-                    <TreeItem />
-                </TreeItem>
-            </TreeItem> */}
         </div>
     )
 };

@@ -9,5 +9,8 @@ export const Weights = {
     },
     Satisfy: {
         "400": 400
+    },
+    Inter: {
+        "400": 400
     }
 };

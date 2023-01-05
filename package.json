@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^4.5.14",
     "@fontsource/nunito-sans": "^4.5.10",
     "@fontsource/satisfy": "^4.5.6",
     "@fontsource/ubuntu": "^4.5.11",

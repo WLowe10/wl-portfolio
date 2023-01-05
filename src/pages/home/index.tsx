@@ -22,7 +22,7 @@ export const Home = () => {
                     <div className={classes.separator}>
                         <span className={classes.separatorBar}/> 
                         <p className={classes.separatorText}>
-                            My Interests
+                           My Interests
                         </p>
                         <span className={classes.separatorBar}/> 
                     </div> 
@@ -32,6 +32,8 @@ export const Home = () => {
                             <BestSongs />
                         </AboutSection> 
                     </div>
+
+                    <CollapsableCard />
                 </MaxContainer>
         </FullFlex>
     )

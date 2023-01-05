@@ -6,7 +6,8 @@ import { createUseStyles } from 'react-jss';
 const useGlobalStyles = createUseStyles({
   "@global": {
     "body": {
-      overflow: "overlay"
+      overflow: "overlay",
+      fontSize: "100%"
     },
     "button": {
       background: "none",

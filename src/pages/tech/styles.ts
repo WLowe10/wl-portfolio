@@ -16,4 +16,10 @@ export const useStyles = createUseStyles({
         padding: "2rem",
         flexDirection: "column",
     },
+    skillContainer: {
+        justifyContent: "center",
+        display: "flex",
+        flexDirection: "row",
+        gap: "1rem"
+    }
 })
