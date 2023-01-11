@@ -22,5 +22,11 @@ export const useStyles = createUseStyles({
         borderRadius: 8,
         backgroundColor: Theme.accents.darker,
         marginRight: 10 
+    },
+    arrowContainer: {
+        flex: 1,
+        display: "flex",
+        justifyContent: "flex-end",
+        paddingLeft: 10
     }
 })

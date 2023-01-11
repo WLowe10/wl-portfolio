@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { useState, ReactNode } from "react";
 import { Legend } from "../legend";
 import { Skill } from "../skill";
 import { useStyles } from "./styles";
-import tslogo from "@global/assets/images/typescript.png";
+import { motion, AnimatePresence } from "framer-motion"; 
 
 type Props = {
     skillGroup: {
@@ -28,27 +28,33 @@ export const SkillCard = ({skillGroup}: Props) => {
     const classes = useStyles();
     const cardName = skillGroup.name; 
     const keys = skillGroup.categories.map(c => ({name: c.name, accent: c.accent}))
+    const [skill, setSkill] = useState(null);
 
     return (
-        <div className={classes.skillCard}>
-            <div className={classes.header}>
-                <div className={classes.head}>
-                    {
-                        skillGroup.image
-                    }
-                    <h1 className={classes.title}>{cardName}</h1>
+        <motion.div className={classes.skillCard} animate={{height: "auto", transition: { }}}>
+            {
+                skill ? <p>test</p> : 
+                <>
+                 <div className={classes.header}>
+                    <button className={classes.head} onClick={() => setSkill("test")}>
+                        {
+                            skillGroup.image
+                        }
+                        <h1 className={classes.title}>{cardName}</h1>
+                    </button>
+                    <Legend keys={keys}/>
                 </div>
-                <Legend keys={keys}/>
-            </div>
-            <div className={classes.skillContainer}>
-                {
-                    skillGroup.categories.map(cat => {
-                        return (
-                            cat.skills.map(s => <Skill name={s.name} accent={cat.accent} image={s.image}/>) 
-                        )
-                    })
-                }
-            </div>
-        </div>
+                <div className={classes.skillContainer}>
+                    {
+                        skillGroup.categories.map(cat => {
+                            return (
+                                cat.skills.map(s => <Skill name={s.name} accent={cat.accent} image={s.image}/>) 
+                            )
+                        })
+                    }
+                </div>
+                </> 
+            }
+        </motion.div>
     )
 };

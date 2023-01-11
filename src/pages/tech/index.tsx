@@ -5,6 +5,8 @@ import { SkillCard, Tree } from "./components";
 import { Express, JSS, React, Stripe, TypeORM, TypeScript, Zod } from "@global/components/icons";
 import { Theme } from "@global/constants/theme";
 
+import zustand from "@global/assets/logos/zustand.png"
+
 const iconSize = 24;
 
 const skillGroup = {
@@ -17,7 +19,8 @@ const skillGroup = {
             skills: [
                 {
                     name: "React",
-                    image: <React height={iconSize} width={iconSize}/>
+                    image: <React height={iconSize} width={iconSize}/>,
+                    content: <p>test</p>
                 },
                 {
                     name: "React Native",
@@ -29,7 +32,7 @@ const skillGroup = {
                 },
                 {
                     name: "Zustand",
-                    image: <JSS height={iconSize} width={iconSize} fill={"white"} color={"white"}/>
+                    image: <img height={iconSize} width={iconSize} src={zustand} style={{borderRadius: 4}}/>
                 }
             ]
         },

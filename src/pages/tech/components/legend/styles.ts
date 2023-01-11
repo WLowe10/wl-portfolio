@@ -5,20 +5,28 @@ import { createUseStyles } from "react-jss";
 export const useStyles = createUseStyles({
     legend: {
         display: "flex",
-        alignItems: "flex-end",
-        flexDirection: "column",
-        overflow: "hidden",
+        position: "relative",
     },
     legendButton: {
+        display: "flex",
         backgroundColor: Theme.accents.darker,
         padding: 10, 
         borderRadius: 8,
-        userSelect: "none"
+        userSelect: "none",
+        cursor: "pointer",
     },
     legendKey: {
         display: "flex",
+        position: "absolute",
+        zIndex: 1,
         flexDirection: "column", 
-        gap: 10
+        gap: 10,
+        backgroundColor: Theme.accents.darker,
+        overflow: "hidden",
+        padding: 10,
+        borderBottomLeftRadius: 8,
+        borderBottomRightRadius: 8,
+        borderTopRightRadius: 8
     },
     legendText: {
         fontFamily: Families.NunitoSans,

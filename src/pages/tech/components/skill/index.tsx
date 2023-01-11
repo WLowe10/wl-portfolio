@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import { useStyles } from "./styles";
+import { ChevronRight } from "react-feather";
+import { Theme } from "@global/constants/theme";
 
 type Props = {
     name: string,
@@ -11,7 +13,7 @@ export const Skill = ({ name, accent, image}: Props) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.skill} style={{backgroundColor: accent}}>
+        <button className={classes.skill} style={{backgroundColor: accent}}>
             <div className={classes.skillImage}>
                 {
                     image
@@ -22,7 +24,10 @@ export const Skill = ({ name, accent, image}: Props) => {
                     name
                 }
             </p>
-        </div>
+            <div className={classes.arrowContainer}>
+                <ChevronRight color={Theme.fontColors.primary}/>
+            </div>
+        </button>
     )
 };
 

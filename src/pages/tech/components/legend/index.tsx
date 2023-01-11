@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion"
 import { useStyles } from "./styles";
 import { Map } from "react-feather";
 import { Theme } from "@global/constants/theme";
+import useOutsideClick from "@rooks/use-outside-click";
 
 type Props = {
     keys: {
@@ -11,7 +12,7 @@ type Props = {
     }[]
 };
 
-const variants = {
+const legendVariants = {
     open: {
        opacity: 1,
        height: "auto",
@@ -30,17 +31,42 @@ const variants = {
     }
 };
 
+const buttonVariants = {
+    open: {
+        borderTopRightRadius: 0,
+        borderBottomRightRadius: 0,
+        transition: {
+        //    type: "spring",
+        }
+    },
+    closed: {
+        borderTopRightRadius: 8,
+        borderBottomRightRadius: 8,
+        transition: {
+        //    type: "spring",
+        }
+    }
+}
+
 export const Legend = ({ keys }: Props) => {
+    const ref = useRef(null) as any;
     const classes = useStyles();
     const [open, setOpen] = useState(false);
 
+    useOutsideClick(ref, () => {
+        setOpen(false)
+    })
+
     return (
-        <div className={classes.legend}>
-            <Map size={18}className={classes.legendButton} color={open ? Theme.fontColors.primary : Theme.fontColors.secondary} onClick={() => setOpen(prev => !prev)}/>
+        <div ref={ref} className={classes.legend}>
+            <motion.button className={classes.legendButton} animate={open ? buttonVariants.open : buttonVariants.closed} onClick={() => setOpen(prev => !prev)}>
+                <Map size={18} color={open ? Theme.fontColors.primary : Theme.fontColors.secondary} />
+            </motion.button>
+
             <AnimatePresence>
                 {
-                    open && <motion.div className={classes.legendKey} animate={variants.open} exit={variants.closed} initial={variants.closed}>
-                        <span className={classes.spacer} />
+                    open && <motion.div animate={legendVariants.open} exit={legendVariants.closed} initial={legendVariants.closed}>
+                        <div className={classes.legendKey}>
                         {
                             keys.map(k => 
                                 <p className={classes.legendText} style={{backgroundColor: k.accent}}>
@@ -50,6 +76,7 @@ export const Legend = ({ keys }: Props) => {
                                 </p>
                             )
                         }
+                        </div>
                 </motion.div>
                 }
             </AnimatePresence>

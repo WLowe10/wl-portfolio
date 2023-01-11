@@ -13,6 +13,7 @@
     "@fontsource/nunito-sans": "^4.5.10",
     "@fontsource/satisfy": "^4.5.6",
     "@fontsource/ubuntu": "^4.5.11",
+    "@rooks/use-outside-click": "^4.11.2",
     "framer-motion": "^7.10.2",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
@@ -21,6 +22,7 @@
     "react-jss": "^10.9.2",
     "react-responsive": "^9.0.2",
     "react-router-dom": "^6.6.0",
+    "react-use-measure": "^2.1.1",
     "reset-css": "^5.0.1"
   },
   "devDependencies": {
