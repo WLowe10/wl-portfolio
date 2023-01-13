@@ -1,7 +1,9 @@
 import { AboutSection } from "./about-section";
 import { DateAnnotation } from "./date-annotation";
+import { Gym } from "./gym";
 
 export {
     AboutSection,
-    DateAnnotation
+    DateAnnotation,
+    Gym
 }

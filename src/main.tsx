@@ -14,7 +14,7 @@ import "@fontsource/inter/400.css";
 import "@fontsource/ubuntu/400.css";
 
 import "@fontsource/satisfy/400.css";
-
+//!!!!!CHANGE FONTSIZES TO EXPORTED
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Root />

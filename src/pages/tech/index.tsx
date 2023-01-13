@@ -1,10 +1,10 @@
 import { useStyles } from "./styles";
 import { FullFlex, MaxContainer } from "@global/components/containers";
 import { TopBar } from "@global/components/general";
-import { SkillCard, Tree } from "./components";
+import { SkillCard } from "./components";
 import { Express, JSS, React, Stripe, TypeORM, TypeScript, Zod } from "@global/components/icons";
 import { Theme } from "@global/constants/theme";
-
+import { useMediaQuery } from "react-responsive";
 import zustand from "@global/assets/logos/zustand.png"
 
 const iconSize = 24;
@@ -68,10 +68,11 @@ const skillGroup = {
 }
 
 export const Tech = () => {
-    const classes = useStyles();
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
+    const classes = useStyles(isMobile as any);
 
     return (
-        <FullFlex className={classes.home}>
+        <FullFlex className={classes.tech}>
             <MaxContainer className={classes.mainContainer}>
                 <TopBar/>
                 <div className={classes.skillContainer}>

@@ -1,11 +1,8 @@
 import { useStyles } from "./styles";
 import { FullFlex, MaxContainer } from "@global/components/containers";
 import { TopBar, TextField, CollapsableCard, HoverableText } from "@global/components/general";
-import { YoutubeLink } from "@global/components/general";
 import { BestSongs } from "./components/best-songs";
-import { AboutSection, DateAnnotation } from "./components";
-import { Music } from "react-feather";
-import { Theme } from "@global/constants/theme";
+import { DateAnnotation, Gym } from "./components";
 
 export const Home = () => {
     const classes = useStyles();
@@ -20,20 +17,17 @@ export const Home = () => {
                     <DateAnnotation time={""}/>
 
                     <div className={classes.separator}>
-                        <span className={classes.separatorBar}/> 
+                        {/* <span className={classes.separatorBar}/>  */}
                         <p className={classes.separatorText}>
                            My Interests
                         </p>
-                        <span className={classes.separatorBar}/> 
+                        {/* <span className={classes.separatorBar}/>  */}
                     </div> 
 
                     <div className={classes.aboutContainer}>
-                        <AboutSection displaySide={"left"} display={<Music size={128} color={Theme.accents.dark} />}>
-                            <BestSongs />
-                        </AboutSection> 
+                        <BestSongs />
+                        <Gym />
                     </div>
-
-                    <CollapsableCard />
                 </MaxContainer>
         </FullFlex>
     )

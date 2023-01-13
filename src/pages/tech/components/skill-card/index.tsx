@@ -1,8 +1,11 @@
 import { useState, ReactNode } from "react";
-import { Legend } from "../legend";
-import { Skill } from "../skill";
+import { Legend, MainTech, TechInfo } from "./components";
+import { Skill } from "./components";
 import { useStyles } from "./styles";
 import { motion, AnimatePresence } from "framer-motion"; 
+import { useMediaQuery } from "react-responsive";
+import useMeasure from "react-use-measure";
+import { CollapsableCard } from "@global/components/general";
 
 type Props = {
     skillGroup: {
@@ -20,41 +23,15 @@ type Props = {
     }
 };
 
-type Skill = {
-    name: string,
-};
-
 export const SkillCard = ({skillGroup}: Props) => {
     const classes = useStyles();
-    const cardName = skillGroup.name; 
-    const keys = skillGroup.categories.map(c => ({name: c.name, accent: c.accent}))
-    const [skill, setSkill] = useState(null);
-
+    // const [skill, setSkill] = useState(false);
+    // const [ref, {height, width}] = useMeasure();
+    
     return (
-        <motion.div className={classes.skillCard} animate={{height: "auto", transition: { }}}>
-            {
-                skill ? <p>test</p> : 
-                <>
-                 <div className={classes.header}>
-                    <button className={classes.head} onClick={() => setSkill("test")}>
-                        {
-                            skillGroup.image
-                        }
-                        <h1 className={classes.title}>{cardName}</h1>
-                    </button>
-                    <Legend keys={keys}/>
-                </div>
-                <div className={classes.skillContainer}>
-                    {
-                        skillGroup.categories.map(cat => {
-                            return (
-                                cat.skills.map(s => <Skill name={s.name} accent={cat.accent} image={s.image}/>) 
-                            )
-                        })
-                    }
-                </div>
-                </> 
-            }
-        </motion.div>
+        <div className={classes.skillCard}> 
+            {/* <MainTech skillGroup={skillGroup}/> */}
+            <TechInfo />
+        </div>
     )
 };

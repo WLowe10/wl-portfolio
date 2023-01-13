@@ -5,11 +5,10 @@ import { useMediaQuery } from 'react-responsive'
 
 type Props = {
     children: ReactNode,
-    display: ReactNode,
-    displaySide: "left" | "right"
+    title: string
 };
 
-export const AboutSection = ({children, display, displaySide}: Props) => {
+export const AboutSection = ({children, title}: Props) => {
     const classes = useStyles();
     const isMobile = useMediaQuery({ query: '(max-width: 1224px)' });
 
@@ -17,7 +16,7 @@ export const AboutSection = ({children, display, displaySide}: Props) => {
         <div className={classes.aboutSection}>
             <div>
                 <span style={{backgroundColor: "#41"}}/>
-                <p className={classes.aboutTitle}>🎵 Top 5 Songs Of Human History</p>
+                <p className={classes.aboutTitle}>{title}</p>
             </div>
             <div className={classes.content}>
                 {

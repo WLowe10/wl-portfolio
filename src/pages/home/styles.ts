@@ -5,9 +5,6 @@ import { Families, Sizes, Weights } from "@global/constants/fonts";
 export const useStyles = createUseStyles({
     home: {
         display: "flex",
-        backgroundColor: Theme.background,
-       // background: "linear-gradient(329deg, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 64%)",
-       //background: "linear-gradient(329deg, rgba(65,94,218,1) 0%, rgba(0,0,0,1) 36%)",
         justifyContent: "center",         
     },
     mainContainer: {
@@ -35,7 +32,7 @@ export const useStyles = createUseStyles({
     separatorText: {
         fontFamily: Families.Satisfy,
         fontSize: Sizes.Medium,
-        color: Theme.accents.grey,
+        color: Theme.fontColors.primary,
         padding: {
             left: "1rem",
             right: "1rem"

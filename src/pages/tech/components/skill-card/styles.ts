@@ -9,34 +9,6 @@ export const useStyles = createUseStyles({
         backgroundColor: Theme.accents.dark,
         borderRadius: 10,
         padding: "1rem",
+        overflow: "hidden",
     },
-    header: {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        marginBottom: "1rem",
-        justifyContent: "space-between"
-    },
-    head: {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center"
-    },
-    headImage: {
-        marginRight: 10,
-        borderRadius: 8 
-    },
-    title: {
-        fontFamily: Families.NunitoSans,
-        color: Theme.fontColors.primary,
-        fontWeight: Weights.NunitoSans[400],
-        fontSize: "1.25rem"
-    },
-    skillContainer: {
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "1rem"
-    },
-    skillGroup: {
-    }
 })

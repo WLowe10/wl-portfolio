@@ -7,7 +7,11 @@ export const useStyles = createUseStyles({
         position: "relative",
         display: "flex",
         flex: 1,
-        flexDirection: "column", 
+        flexDirection: "column",
+        borderBottomLeftRadius: 4,
+        borderTopRightRadius: 4,
+        borderBottomRightRadius: 4,
+        //!not working yet
     },
     tab: {
         display: "flex",
@@ -18,7 +22,8 @@ export const useStyles = createUseStyles({
         fontFamily: Families.NunitoSans,
         color: Theme.fontColors.primary,
         fontWeight: Weights.NunitoSans[600],
-        borderRadius: 4,
+        borderTopLeftRadius: 4,
+        borderTopRightRadius: 4,
         maxWidth: "fit-content",
         padding: {
             left: "1rem",
