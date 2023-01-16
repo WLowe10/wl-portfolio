@@ -8,7 +8,8 @@ export const useStyles = createUseStyles({
         flexDirection: "row",
         alignItems: "center",
         padding: 5,
-        borderRadius: 8
+        borderRadius: 8,
+        flex: 1  
     },
     skillTitle: {
         fontFamily: Families.NunitoSans,

@@ -13,7 +13,7 @@ export const Skill = ({ name, accent, image}: Props) => {
     const classes = useStyles();
 
     return (
-        <button className={classes.skill} style={{backgroundColor: accent}}>
+        <div className={classes.skill} style={{backgroundColor: accent}}>
             <div className={classes.skillImage}>
                 {
                     image
@@ -27,7 +27,7 @@ export const Skill = ({ name, accent, image}: Props) => {
             <div className={classes.arrowContainer}>
                 <ChevronRight color={Theme.fontColors.primary}/>
             </div>
-        </button>
+        </div>
     )
 };
 

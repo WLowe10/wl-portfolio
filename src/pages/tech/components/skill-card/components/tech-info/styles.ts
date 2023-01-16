@@ -5,6 +5,7 @@ import { createUseStyles } from "react-jss";
 export const useStyles = createUseStyles({
     techInfo: {
         display: "flex",
+        flexDirection: "column",
     },
     header: {
         display: "flex",
@@ -27,5 +28,11 @@ export const useStyles = createUseStyles({
         fontWeight: Weights.NunitoSans[700],
         color: Theme.fontColors.primary,
         fontSize: Sizes.Medium
+    },
+    mainInfo: {
+        display: "flex",
+
+        //!delete
+        color: "white"
     }
 })

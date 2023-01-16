@@ -24,9 +24,11 @@ export const useStyles = createUseStyles({
         backgroundColor: Theme.accents.darker,
         overflow: "hidden",
         padding: 10,
+        right: "100%",
+        borderTopLeftRadius: 8,
         borderBottomLeftRadius: 8,
         borderBottomRightRadius: 8,
-        borderTopRightRadius: 8
+        borderTopRightRadius: 0,
     },
     legendText: {
         fontFamily: Families.NunitoSans,

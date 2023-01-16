@@ -19,9 +19,9 @@ export const TopBar = () => {
 
             {
                 isMobile ? (<Grid color={Theme.fontColors.primary}/>) : (
-                RouteList.map(route => {
-                   if (route.path == RouteTypes.Contact) return <Link to={route.path}><Mail color={location == route.path ? Theme.fontColors.secondary : Theme.accents.grey} /></Link>
-                   return <Link className={location == route.path ? classes.navElementActive : classes.navElement} to={route.path}>{route.name}</Link>
+                RouteList.map((route, index) => {
+                   if (route.path == RouteTypes.Contact) return <Link to={route.path} key={index}><Mail color={location == route.path ? Theme.fontColors.secondary : Theme.accents.grey} /></Link>
+                   return <Link className={location == route.path ? classes.navElementActive : classes.navElement} to={route.path} key={index}>{route.name}</Link>
                 })
                 )
             }

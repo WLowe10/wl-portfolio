@@ -33,8 +33,8 @@ const legendVariants = {
 
 const buttonVariants = {
     open: {
-        borderTopRightRadius: 0,
-        borderBottomRightRadius: 0,
+        borderTopLeftRadius: 0,
+        borderBottomLeftRadius: 0,
         transition: {
         //    type: "spring",
         }

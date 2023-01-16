@@ -4,7 +4,8 @@ import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
     mainContainer: {
-        position: "relative"
+        position: "relative",
+        // flex: 1 
     },
     header: {
         display: "flex",

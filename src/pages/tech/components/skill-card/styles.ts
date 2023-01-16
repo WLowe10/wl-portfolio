@@ -4,11 +4,11 @@ import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
     skillCard: {
-        display: "flex",
-        flexDirection: "column",
         backgroundColor: Theme.accents.dark,
         borderRadius: 10,
         padding: "1rem",
         overflow: "hidden",
+        // position: "relative",
+        flex: 1 
     },
 })
