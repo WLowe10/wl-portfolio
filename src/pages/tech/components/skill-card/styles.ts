@@ -8,7 +8,9 @@ export const useStyles = createUseStyles({
         borderRadius: 10,
         padding: "1rem",
         overflow: "hidden",
-        // position: "relative",
-        flex: 1 
+
+
+        flex: 1 ,
+        maxWidth: "28rem"
     },
 })

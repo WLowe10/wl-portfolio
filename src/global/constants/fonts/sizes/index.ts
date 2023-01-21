@@ -4,5 +4,5 @@ export const Sizes = {
     Medium: "1.5rem",
     Default: "1rem",
     Small: ".75rem",
-    ExtraSmall: ""
+    ExtraSmall: ".5rem"
 };

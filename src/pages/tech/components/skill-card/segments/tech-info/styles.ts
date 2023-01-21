@@ -6,6 +6,7 @@ export const useStyles = createUseStyles({
     techInfo: {
         display: "flex",
         flexDirection: "column",
+        flex: 1  
     },
     header: {
         display: "flex",
@@ -20,8 +21,14 @@ export const useStyles = createUseStyles({
         justifyContent: "center",
         alignItems: "center",
         padding: 5,
-        backgroundColor: Theme.accents.grey,
+        backgroundColor: Theme.accents.darker,
         borderRadius: 100
+    },
+    credentials: {
+        display: "flex", 
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
     },
     techInfoName: {
         fontFamily: Families.NunitoSans,
@@ -31,8 +38,15 @@ export const useStyles = createUseStyles({
     },
     mainInfo: {
         display: "flex",
-
-        //!delete
-        color: "white"
+    },
+    description: {
+       color: Theme.fontColors.secondary,
+       fontFamily: Families.NunitoSans 
+    },
+    footer: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-end",
+        gap: 5,
     }
 })

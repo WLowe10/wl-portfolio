@@ -2,6 +2,8 @@ import { Theme } from "@global/constants/theme";
 import { useStyles } from "./styles"
 import { ChevronLeft } from "react-feather";
 import { TechDetailsType } from "@global/types";
+import { GithubLink, NpmLink, Pill } from "@global/components/general";
+import { Npm } from "@global/components/icons";
 
 type Props = {
     details: TechDetailsType,
@@ -10,6 +12,7 @@ type Props = {
 
 export const TechInfo = ({details, clearTech}: Props) => {
     const classes = useStyles();
+    const { name, pill } = details;
 
     return (
         <div className={classes.techInfo}>
@@ -17,16 +20,23 @@ export const TechInfo = ({details, clearTech}: Props) => {
                <button className={classes.backButton} onClick={clearTech}>
                     <ChevronLeft color={Theme.fontColors.primary}/>
                 </button>
-                <h1 className={classes.techInfoName}>
-                    {
-                        details.name
-                    }
-                </h1> 
+                <div className={classes.credentials}>
+                    <h1 className={classes.techInfoName}>
+                        {
+                            name
+                        }
+                    </h1> 
+                    <Pill color={pill.color} text={pill.text}/>
+                </div>
             </div>
             <div className={classes.mainInfo}>
-                <p>
-                    I use {details.name} to build out the frontends of my web applications. 
+                <p className={classes.description}>
+                    I use {name} to build out the frontends of my web applications. 
                 </p>                
+            </div>
+            <div className={classes.footer}>
+                <GithubLink href="" />
+                <NpmLink href=""/>
             </div>
         </div>
     )

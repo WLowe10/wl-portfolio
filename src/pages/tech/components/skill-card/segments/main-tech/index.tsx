@@ -1,23 +1,12 @@
 import { useStyles } from "./styles"; 
-import { Legend } from "../legend";
+import { Legend } from "../../components/legend";
 import { ReactNode } from "react";
-import { Skill } from "../skill";
+import { Skill } from "../../components/skill";
 import { useMediaQuery } from "react-responsive";
-import { TechDetailsType } from "@global/types";
+import { SkillGroupType, TechDetailsType } from "@global/types";
 
 type Props = {
-    skillGroup: {
-        name: string,
-        image: ReactNode,
-        categories: {
-            name: string,
-            accent: string,
-            skills: {
-                name: string,
-                image: ReactNode
-            }[]
-        }[]
-    },
+    skillGroup: SkillGroupType,
     setTech: (techDetails: TechDetailsType) => void,
 };
 
@@ -42,7 +31,7 @@ export const MainTech = ({skillGroup, setTech}: Props) => {
                         skillGroup.categories.map((cat) => {
                             return (
                                 cat.skills.map((s, index) => (
-                                    <button style={{display: "flex"}} onClick={() => setTech({name: s.name})}>
+                                    <button style={{display: "flex"}} onClick={() => setTech({name: s.name, pill: { color: cat.accent, text: cat.name }})}>
                                         <Skill name={s.name} accent={cat.accent} image={s.image} key={index}/>
                                     </button>
                                 )) 
