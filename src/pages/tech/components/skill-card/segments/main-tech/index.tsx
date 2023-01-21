@@ -31,7 +31,11 @@ export const MainTech = ({skillGroup, setTech}: Props) => {
                         skillGroup.categories.map((cat) => {
                             return (
                                 cat.skills.map((s, index) => (
-                                    <button style={{display: "flex"}} onClick={() => setTech({name: s.name, pill: { color: cat.accent, text: cat.name }})}>
+                                    <button style={{display: "flex"}} onClick={() => setTech({
+                                        name: s.name, 
+                                        description: s.description,
+                                        pill: { color: cat.accent, text: cat.name },
+                                        })}>
                                         <Skill name={s.name} accent={cat.accent} image={s.image} key={index}/>
                                     </button>
                                 )) 

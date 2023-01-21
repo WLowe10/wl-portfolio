@@ -1,5 +1,5 @@
 import { useStyles } from "./styles";
-import { AboutSection } from "../about-section";
+import { AboutSection } from "../../components/about-section";
 import { Theme } from "@global/constants/theme";
 
 const songs = [

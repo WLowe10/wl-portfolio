@@ -6,14 +6,14 @@ export const useStyles = createUseStyles({
     techInfo: {
         display: "flex",
         flexDirection: "column",
-        flex: 1  
+        flex: 1, 
     },
     header: {
         display: "flex",
         marginBottom: "1rem",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-between",
+        // justifyContent: "space-between",
         gap: 10,
     },
     backButton: {
@@ -27,7 +27,9 @@ export const useStyles = createUseStyles({
     credentials: {
         display: "flex", 
         flexDirection: "row",
+        justifyContent: "space-between",
         alignItems: "center",
+        flex: 1, 
         gap: 10,
     },
     techInfoName: {
@@ -38,15 +40,20 @@ export const useStyles = createUseStyles({
     },
     mainInfo: {
         display: "flex",
+        paddingBottom: "2rem"
     },
     description: {
        color: Theme.fontColors.secondary,
-       fontFamily: Families.NunitoSans 
+       fontFamily: Families.NunitoSans,
+       lineHeight: 1.5,
+    },
+    galleryContainer: {
+        paddingBottom: "1rem"
     },
     footer: {
         display: "flex",
         flexDirection: "row",
         justifyContent: "flex-end",
-        gap: 5,
+        gap: 10,
     }
 })

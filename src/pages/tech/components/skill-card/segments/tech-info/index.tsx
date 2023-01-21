@@ -4,6 +4,8 @@ import { ChevronLeft } from "react-feather";
 import { TechDetailsType } from "@global/types";
 import { GithubLink, NpmLink, Pill } from "@global/components/general";
 import { Npm } from "@global/components/icons";
+import { Gallery } from "./gallery";
+import { useMediaQuery } from "react-responsive";
 
 type Props = {
     details: TechDetailsType,
@@ -12,7 +14,8 @@ type Props = {
 
 export const TechInfo = ({details, clearTech}: Props) => {
     const classes = useStyles();
-    const { name, pill } = details;
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
+    const { name, pill, description } = details;
 
     return (
         <div className={classes.techInfo}>
@@ -30,10 +33,17 @@ export const TechInfo = ({details, clearTech}: Props) => {
                 </div>
             </div>
             <div className={classes.mainInfo}>
-                <p className={classes.description}>
-                    I use {name} to build out the frontends of my web applications. 
+                <p className={classes.description} style={{hyphens: isMobile ? "auto" : "inherit"}}>
+                    {
+                        description
+                    }
                 </p>                
             </div>
+
+            <div className={classes.galleryContainer}>
+                <Gallery />
+            </div>
+
             <div className={classes.footer}>
                 <GithubLink href="" />
                 <NpmLink href=""/>

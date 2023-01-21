@@ -3,14 +3,15 @@ import { Providers } from "./providers";
 import { Routes } from "./routes";
 
 import { createUseStyles } from 'react-jss';
+import { PresenceBar } from "@global/components/general/presence-bar";
 
 const useGlobalStyles = createUseStyles({
   "@global": {
     "body": {
       overflow: "overlay",
       fontSize: "100%",
-      // backgroundColor: Theme.background
-       background: "linear-gradient(329deg, rgba(65,94,218,1) 0%, rgba(0,0,0,1) 36%)",
+      backgroundColor: Theme.background
+      //  background: "linear-gradient(329deg, rgba(65,94,218,1) 0%, rgba(0,0,0,1) 36%)",
     },
     "button": {
       background: "none",
@@ -27,9 +28,10 @@ const useGlobalStyles = createUseStyles({
 
 export const Root = () => {
     useGlobalStyles();
-
+//!add topbar to root
     return (
         <Providers>
+            <PresenceBar />
             <Routes />
         </Providers>
     )

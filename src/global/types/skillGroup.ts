@@ -8,7 +8,8 @@ export type SkillGroupType = {
         accent: string,
         skills: Array<{
             name: string,
-            image: ReactNode
+            image: ReactNode,
+            description: string
         }>
     }>
 }

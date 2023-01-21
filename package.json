@@ -17,6 +17,7 @@
     "framer-motion": "^7.10.2",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
+    "react-countup": "^6.4.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
     "react-jss": "^10.9.2",
