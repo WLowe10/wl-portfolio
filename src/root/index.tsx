@@ -1,9 +1,7 @@
 import { Theme } from "@global/constants/theme";
 import { Providers } from "./providers";
 import { Routes } from "./routes";
-
 import { createUseStyles } from 'react-jss';
-import { PresenceBar } from "@global/components/general/presence-bar";
 
 const useGlobalStyles = createUseStyles({
   "@global": {
@@ -31,7 +29,6 @@ export const Root = () => {
 //!add topbar to root
     return (
         <Providers>
-            <PresenceBar />
             <Routes />
         </Providers>
     )

@@ -1,4 +1,4 @@
-import { Home, Tech } from "@pages/index";
+import { Home, Tech, Projects, Contact } from "@pages/index";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RouteTypes } from "@global/constants/routes";
 
@@ -13,16 +13,12 @@ const router = createBrowserRouter([
     },
     {
         path: RouteTypes.Projects,
-        element: ""
+        element: <Projects />
     },
     {
       path: RouteTypes.Contact,
-      element: ""
+      element: <Contact />
   }
   ]);
 
-export const Routes = () => {
-    return (
-        <RouterProvider router={router} />
-    )
-};
+export const Routes = () => <RouterProvider router={router} />
