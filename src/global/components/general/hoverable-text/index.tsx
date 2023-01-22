@@ -14,16 +14,12 @@ const variants = {
         opacity: 1,
         transition: {
             duration: .25,
-            type: "tween",
-            ease: "easeIn"
         }
-     },
+    },
     hidden: { 
         opacity: 0,
         transition: {
             duration: .25,
-            type: "tween",
-            ease: "easeIn"
         }
      }
 };
@@ -32,7 +28,7 @@ const variants = {
 
 export const HoverableText = ({children, text}: Props) => {
     const classes = useStyles();
-
+//!change while hover to use state
     return (
         <motion.span className={classes.hoverContainer} whileHover={"visible"} initial={"hidden"}>
             <span className={classes.text}>

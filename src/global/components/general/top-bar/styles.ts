@@ -5,13 +5,29 @@ import { Theme } from "@global/constants/theme";
 export const useStyles = createUseStyles({
     topBar: {
         display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
+        flexDirection: "column",
         width: "100%",
         padding: {
             bottom: 50
         }
+    },
+    presence: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingBottom: 32
+    },
+    presenceText: {
+        color: Theme.fontColors.secondary,
+        fontFamily: Families.NunitoSans,
+        fontWeight: Weights.NunitoSans[600]
+    },
+    navContainer: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center"
     },
     title: {
         fontFamily: Families.SaiyanSans,

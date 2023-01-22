@@ -1,8 +1,9 @@
 import { useStyles } from "./styles";
 import { Song } from "./components";
-import { AboutSection } from "../about-section";
+import { AboutSection } from "../../components";
 import { Music } from "react-feather";
 import { Theme } from "@global/constants/theme";
+
 import BHOTR from "@global/assets/images/BHOTR.png";
 import responsibility from "@global/assets/images/responsibility.png";
 import shire from "@global/assets/images/shire.png";

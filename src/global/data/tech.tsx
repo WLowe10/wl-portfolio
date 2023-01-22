@@ -11,7 +11,7 @@ const skillGroups: SkillGroupType = {
     categories: [
         {
             name: "Frontend",
-            accent: "#2B65EC",
+            accent: "#415EDA",
             skills: [
                 {
                     name: "React",
@@ -32,7 +32,7 @@ const skillGroups: SkillGroupType = {
         },
         {
             name: "Mobile",
-            accent: "#01796f ",
+            accent: "#FF5E6A",
             skills: [
                 {
                     name: "React Native",
@@ -43,7 +43,7 @@ const skillGroups: SkillGroupType = {
         },
         {
             name: "Backend",
-            accent: "#003366",
+            accent: "#8F8CB8",
             skills: [
                 {
                     name: "Express",
@@ -59,7 +59,7 @@ const skillGroups: SkillGroupType = {
         },
         {
             name: "Universal",
-            accent: "#333333",
+            accent: "#464555",
             skills: [
                 {
                     name: "Zod",

@@ -1,5 +1,5 @@
 import { useStyles } from "./styles";
-import { AboutSection } from "../../components/about-section";
+import { AboutSection } from "../../components";
 import { Theme } from "@global/constants/theme";
 
 const songs = [
@@ -22,9 +22,7 @@ export const Gym = () => {
 
     return (
         <AboutSection title={"🏋️ Gym"}>
-            <div className={classes.bestSongs}>
-                {
-                }
+            <div className={classes.gym}>
             </div>
         </AboutSection>
     )
